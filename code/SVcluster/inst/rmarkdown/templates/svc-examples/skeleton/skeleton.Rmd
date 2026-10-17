@@ -1,0 +1,18 @@
+---
+title: "Template Title"
+author: "Lucas Scheffer"
+date: "05/13/2025"
+output: output_format
+---
+
+
+\ Loading the package:  
+```{r setup, include=FALSE}
+library(SVCCluster)
+```
+
+\ Testing the `SVC` function at the iris dataset:
+```{r}
+res <- SVC(data=iris[,1:4],sigma=2,varredura=10,kernel="gaussian")
+plot(iris[,1:4],col=factor(res$grupos))
+```
